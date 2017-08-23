@@ -1,0 +1,140 @@
+﻿<!-- Large modal -->
+<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+	Login modal
+</button>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+	 aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					×
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					Login/Registration - <a href="http://www.jquery2dotnet.com">jquery2dotnet.com</a>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+							<li><a href="#Registration" data-toggle="tab">Registration</a></li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div class="tab-pane active" id="Login">
+									@using (Html.BeginForm("LoginUser", "Register"))
+									{
+
+										<div class="form-group">
+											<label for="UserName" class="col-sm-2 control-label">
+												Email
+											</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="UserName" placeholder="UserName" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="Password" class="col-sm-2 control-label">
+												Password
+											</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="Password" placeholder="Password" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2">
+											</div>
+											<div class="col-sm-10">
+												<button type="submit" class="btn btn-primary btn-sm">
+													Submit
+												</button>
+											</div>
+										</div>
+									}
+
+
+							</div>
+							<div class="tab-pane" id="Registration">
+								@using (Html.BeginForm("Registration", "Register"))
+								{
+									<div class="form-group">
+										<label for="username" class="col-sm-2 control-label">
+											Username
+										</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" name="UserName" placeholder="usernme" />
+										</div>
+									</div>
+										<div class="form-group">
+											<label for="password" class="col-sm-2 control-label">
+												password
+											</label>
+											<div class="col-sm-10">
+												<input type="password" class="form-control" name="Password" placeholder="password" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="email" class="col-sm-2 control-label">
+												email
+											</label>
+											<div class="col-sm-10">
+												<input type="email" class="form-control" name="Email" placeholder="email" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2">
+											</div>
+											<div class="col-sm-10">
+												<button type="submit" class="btn btn-primary btn-sm">
+													Save & Continue
+												</button>
+												<button type="button" class="btn btn-default btn-sm">
+													Cancel
+												</button>
+											</div>
+										</div>
+								}
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	.nav-tabs {
+		margin-bottom: 15px;
+	}
+
+	.sign-with {
+		margin-top: 25px;
+		padding: 20px;
+	}
+
+	div#OR {
+		height: 30px;
+		width: 30px;
+		border: 1px solid #C2C2C2;
+		border-radius: 50%;
+		font-weight: bold;
+		line-height: 28px;
+		text-align: center;
+		font-size: 12px;
+		float: right;
+		position: absolute;
+		right: -16px;
+		top: 40%;
+		z-index: 1;
+		background: #DFDFDF;
+	}
+
+	<script > $('#myModal').modal('show'); // www.jquery2dotnet.com </script >
+</style>
