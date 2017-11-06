@@ -1,1 +1,1 @@
-lab9-latest
+##### Azure cloud service application
